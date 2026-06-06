@@ -6,7 +6,11 @@ const Navbar = () => {
             <Toolbar>
                 <Typography variant='h6' sx={{flexGrow: 1}}>MyApp</Typography>
                 <Box>
-                    <Button color='inherit' component={NavLink} to='/'>Home</Button>
+                    <Button color='inherit' component={NavLink} to='/'>
+                    Головна</Button>
+
+                    <Button color='inherit' component={NavLink} to='/register'>
+                    Увійти</Button>
                 </Box>
             </Toolbar>
         </AppBar>
