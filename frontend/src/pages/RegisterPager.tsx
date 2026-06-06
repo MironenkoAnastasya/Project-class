@@ -1,23 +1,9 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
+import { RegisterSchema, type RegisterData } from "../validations/RegisterSchema";
 
-const RegisterSchema = z.object({
-    name: z.string().min(3, { message: "Мінімум 3 символи" }).max(20).nonempty(),
-    email: z.email().nonempty(),
-    password: z.string().min(6).max(20).nonempty(),
-    repeatPassword: z.string().min(6).max(20).nonempty()
-})
-    .refine((data) => data.password === data.repeatPassword, {
-        message: "Паролі не співпадають",
-        path: ["repeatPassword"],
-    });
-
-    type RegisterData = z.infer<typeof RegisterSchema>;
-
-    
 
 
 
@@ -31,7 +17,7 @@ const RegisterPager = () => {
         resolver: zodResolver(RegisterSchema),
     });
 
-    const onSubmit = (data : any) => {
+    const onSubmit = (data : RegisterData) => {
         console.log(data);
     }
 
