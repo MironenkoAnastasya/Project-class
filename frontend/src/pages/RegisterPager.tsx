@@ -1,11 +1,7 @@
 import { Box, Button, TextField, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema, type RegisterData } from "../validations/RegisterSchema";
-
-
-
 
 
 const RegisterPager = () => {

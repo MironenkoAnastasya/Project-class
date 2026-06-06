@@ -1,4 +1,4 @@
-import { AppBar, Box, Button, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Toolbar, Typography} from '@mui/material';
 import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     return (
@@ -11,6 +11,15 @@ const Navbar = () => {
 
                     <Button color='inherit' component={NavLink} to='/register'>
                     Увійти</Button>
+
+                     <Button color='inherit' component={NavLink} to='/stati'>
+                    Статті</Button>
+
+                    <Button color='inherit' component={NavLink} to='/products'>
+                    Товари</Button>
+
+
+
                 </Box>
             </Toolbar>
         </AppBar>
