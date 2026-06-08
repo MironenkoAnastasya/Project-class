@@ -2,9 +2,14 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterSchema, type RegisterData } from "../validations/RegisterSchema";
+import { useRegisterMutation } from "../assets/api/authApi";
 
 
 const RegisterPager = () => {
+
+    const [registerUser] = useRegisterMutation();
+
+
     const { register, 
         handleSubmit, 
         formState: { errors } 
@@ -14,7 +19,7 @@ const RegisterPager = () => {
     });
 
     const onSubmit = (data : RegisterData) => {
-        console.log(data);
+        registerUser(data);
     }
 
 
