@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useGetArticleByIdQuery } from "../assets/api/articlesApi";
 
 const ArticlePage = () => {
     const { id } = useParams();
