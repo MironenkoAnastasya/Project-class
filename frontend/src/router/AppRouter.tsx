@@ -5,6 +5,7 @@ import RegisterPager from "../pages/RegisterPager";
 import StatiPager from "../pages/StatiPager";
 import ProductsPager from "../pages/ProductsPager";
 import ArticlePage from "../pages/ArticlePage";
+import ApplyPage from "../pages/ApplyPage";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
             {
                 path: '/articles/:id',
                 element: <ArticlePage />
+            },
+
+            {
+                path: '/apply',
+                element: <ApplyPage />
             }
         ]
     }

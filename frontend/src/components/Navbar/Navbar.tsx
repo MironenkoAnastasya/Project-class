@@ -17,6 +17,8 @@ const Navbar = () => {
 
                     <Button color='inherit' component={NavLink} to='/products'>
                     Товари</Button>
+                    <Button color='inherit' component={NavLink} to='/apply'>
+                    Анкета</Button>
 
 
 
