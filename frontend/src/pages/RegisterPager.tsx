@@ -27,6 +27,10 @@ const RegisterPager = () => {
         <div>
             <Typography variant="h4" gutterBottom>Реєстрація</Typography>
             <Box component="form" onSubmit={handleSubmit(onSubmit)}>
+
+
+
+
                 <TextField 
                 variant="outlined" 
                 fullWidth label="Ваше Ім'я" 
@@ -82,6 +86,12 @@ const RegisterPager = () => {
                     </Button>
 
 
+            </Box>
+
+            <Box sx={{ mt: 2 }}>
+                <Typography variant="body2">
+                    Вже маєте акаунт? <a href="/login">Увійти</a>
+                </Typography>
             </Box>
         </div>
     );

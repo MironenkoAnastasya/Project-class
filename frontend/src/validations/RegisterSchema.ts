@@ -11,6 +11,19 @@ export const RegisterSchema = z.object({
         path: ["repeatPassword"],
     });
 
+
+
+    export const LoginSchema = z.object({
+    email: z.email().nonempty(),
+    password: z.string().min(6).max(20).nonempty(),
+    repeatPassword: z.string().min(6).max(20).nonempty()
+})
+    .refine((data) => data.password === data.repeatPassword, {
+        message: "Паролі не співпадають",
+        path: ["repeatPassword"],
+    });
+
     export type RegisterData = z.infer<typeof RegisterSchema>;
+     export type LoginData = z.infer<typeof LoginSchema>;
 
     

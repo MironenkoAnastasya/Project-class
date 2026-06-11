@@ -6,6 +6,9 @@ import StatiPager from "../pages/StatiPager";
 import ProductsPager from "../pages/ProductsPager";
 import ArticlePage from "../pages/ArticlePage";
 import ApplyPage from "../pages/ApplyPage";
+import LoginPager from "../pages/LoginPager";
+import Profile from "../pages/Profile";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -39,6 +42,20 @@ const router = createBrowserRouter([
             {
                 path: '/apply',
                 element: <ApplyPage />
+            },
+
+            {
+                path: 'login',
+                element: <LoginPager />
+            },
+            {
+                element: <PrivateRoute />,
+                children: [
+                    {
+                        path: '/profile',
+                        element: <Profile />
+                    }
+                ]
             }
         ]
     }
