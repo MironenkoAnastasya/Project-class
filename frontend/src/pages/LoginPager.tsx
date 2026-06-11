@@ -101,7 +101,10 @@ const LoginPage = () => {
     const user = await loginUser(data);
     dispatch(setToken(user.data.token));
     navigate("/");
+
   };
+
+
 
   return (
     <Box>
