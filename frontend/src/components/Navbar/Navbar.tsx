@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
     const handleLogout = () => {
-        useDispatch(removeToken());
+        dispatch(removeToken());
         dispatch(baseApi.util.resetApiState());
         //dispatch(baseApi.util.invalidateTags(["User"]));
     } 
@@ -52,6 +52,8 @@ const Navbar = () => {
                     <Button color='inherit' component={NavLink} to='/apply'>
                     Анкета</Button>
 
+                <Button color='inherit' component={NavLink} to='/class'>
+                    Class</Button>
 
 
                 </Box>

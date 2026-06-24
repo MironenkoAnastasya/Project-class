@@ -9,6 +9,7 @@ import ApplyPage from "../pages/ApplyPage";
 import LoginPager from "../pages/LoginPager";
 import Profile from "../pages/Profile";
 import PrivateRoute from "./PrivateRoute";
+import Class from "../pages/Class";
 
 const router = createBrowserRouter([
     {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
                         element: <Profile />
                     }
                 ]
+            },
+            {
+                path: 'class',
+                element: <Class />
             }
         ]
     }
